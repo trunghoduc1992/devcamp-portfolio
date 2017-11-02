@@ -30,6 +30,7 @@ puts "5 skills created"
   Portfolio.create!(
     title: "Portfolio title: #{portfolio_item}",
     subtitle: "My great services",
+    body: "Lorem ipsum...............................................",
     main_image: "http://via.placeholder.com/600x400",
     thumb_image: "http://via.placeholder.com/350x200"
     )
