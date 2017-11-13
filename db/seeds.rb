@@ -9,7 +9,7 @@
 3.times do |topic|
   Topic.create!(
       title: "Topic #{topic}"
-    )
+  )
 end
 
 puts "3 topics created"
@@ -19,7 +19,7 @@ puts "3 topics created"
       title: "My Blog Post #{blog}",
       body: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum...",
       topic_id: Topic.last.id
-    )
+  )
 end
 
 puts "10 blog posts created"
@@ -29,7 +29,7 @@ puts "10 blog posts created"
   Skill.create!(
       title: "Rails #{skill}",
       percent_utilized: 15
-    )
+  )
 end
 
 puts "5 skills created"
@@ -42,7 +42,7 @@ puts "5 skills created"
     body: "Lorem ipsum...............................................",
     main_image: "http://via.placeholder.com/600x400",
     thumb_image: "http://via.placeholder.com/350x200"
-    )
+  )
 end
 
 1.times do |portfolio_item|
@@ -52,6 +52,17 @@ end
     body: "Lorem ipsum...............................................",
     main_image: "http://via.placeholder.com/600x400",
     thumb_image: "http://via.placeholder.com/350x200"
-    )
+  )
 end
 puts "9 portfolio items created"
+
+3.times do |technology|
+  # Technology.create!(
+  #     name: "Technology #{technology}",
+  #     portfolio_id: Portfolio.last.id
+  # )
+  Portfolio.last.technologies.create!(
+    name: "Technology #{technology}"
+  )
+end
+puts "3 technologies created"
